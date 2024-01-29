@@ -6,8 +6,7 @@ struct trabajador
     char nombre[50];
     float sueldo;
     float sueldofinal;
-    int horas1;
-    int horas2;
+
 };
 
 int main(){
@@ -51,6 +50,42 @@ do
         printf("Coloque 3 si no trabajo horas extra\n");
         scanf("%d", &aux);
 
+        if (aux==1)
+        {
+            printf("Coloque cuantas horas extras trabajo\n");
+            scanf("%d",&aux1);
+            if (aux1<48){
+            trabajadores[i].sueldofinal=trabajadores[i].sueldo/240;
+            aux2=trabajadores[i].sueldofinal;
+            trabajadores[i].sueldofinal=trabajadores[i].sueldofinal*0.50;
+            trabajadores[i].sueldofinal=trabajadores[i].sueldofinal+aux2;
+            trabajadores[i].sueldofinal=trabajadores[i].sueldofinal*aux1;
+            trabajadores[i].sueldofinal=trabajadores[i].sueldofinal+trabajadores[i].sueldo;
+            printf("Datos guardados en el archivo 'trabajadores.txt'.\n");
+            }
+            else{
+                printf("No se puede colocar mas de 48 horas\n");
+            }
+
+
+
+        }
+        else if (aux==2)
+        {
+            printf("Coloque cuantas horas extras trabajo\n");
+            scanf("%d",&aux1);
+            if(aux1<48){
+            trabajadores[i].sueldofinal=trabajadores[i].sueldo/240;
+            aux2=trabajadores[i].sueldofinal;
+            trabajadores[i].sueldofinal=trabajadores[i].sueldofinal+aux2;
+            trabajadores[i].sueldofinal=trabajadores[i].sueldofinal*aux1;
+            trabajadores[i].sueldofinal=trabajadores[i].sueldofinal+trabajadores[i].sueldo;
+            printf("Datos guardados en el archivo 'trabajadores.txt'.\n");
+            }
+            else {
+            printf("No se puede colocar mas de 48 horas\n");
+
+            }
 
 
         }
