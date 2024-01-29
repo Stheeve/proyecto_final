@@ -10,3 +10,15 @@ struct trabajador
     int horas2;
 };
 
+int main(){
+
+int opcion;
+int num;
+int aux;
+int aux1;
+float aux2;
+FILE*archivo;
+
+printf("Coloque el numero de empleados que desee ingresar\n");
+scanf("%d",&num);
+
